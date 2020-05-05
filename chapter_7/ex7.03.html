@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 7.03: Video</title>
+        <style>
+            .video-container {
+                max-width: 1080px;
+                    margin: 16px auto;
+            }
+            .video-container video {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="video-container">
+            <video id="video-1" poster="audio/IMG-20200309-WA0030.jpg " controls>
+                <source src="audio/videoplayback.mp4" type="video/mp4">
+                <track src="audio/subtitles1.vtt" kind="subtitles" label="English" srclang="en" default>
+                <track src="audio/subtitles2.vtt" kind="subtitles" label="Hinju" srclang="hinju" default>
+                Your browser does not support the HTML5 <code>video</code> element.
+            </video>                    
+        </div>
+        <canvas id="canvasArea" width="320" height="240">
+            Your browser does not support the <code>canvas</code> element.
+        </canvas>
+        <script>
+            const canvasElement = document.getElementById('canvasArea');
+            if (canvasElement.getContext) {
+                const context = canvasElement.getContext('2d');
+                // we have a context so we can draw something
+            }
+        </script>
+    </body>
+</html>
