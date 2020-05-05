@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS transition with multiple values</title>
+    <style>
+         body {
+        background-color: silver;
+      }
+      .top-navigation-link {
+        height: 28px;
+        position: relative;
+        width: 225px;
+        display: inline-block;
+      }
+      .top-navigation-link:before,
+      .top-navigation-link:after {
+        text-align: center;
+        line-height: 28px;
+        content: attr(title);
+        position: absolute;
+        left: 0;
+        right: 0;
+        transition: 250ms;
+      }
+      .top-navigation-link:check {
+        top: -10px;
+        left: -10px;
+        color: greenyellow;
+      }
+
+      .top-navigation-link:after {
+        color: red;
+      }
+      .top-navigation-link:before {
+        top: 0;
+        filter: blur(0);
+        opacity: 1;
+        background-color: cadetblue;
+      }
+      .top-navigation-link:after {
+        top: 28px;
+        filter: blur(5px);
+        background-color: firebrick;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="top-navigation-menu">
+        <a class="top-navigation-link" href="https://www.google.com" title="Top Search Engine"></a>
+        <a class="top-navigation-link" href="https://www.packtpub.com/all-products" title="Free Coding Resource"></a>
+        <a class="top-navigation-link" href="https://www.packtpub.com/free-learning" title="Free PRO Coding"></a>
+    </nav>
+  </body>
+</html>
