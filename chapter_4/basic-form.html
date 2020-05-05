@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple form</title>
+  <style>
+      fieldset{
+          display: inline-block;
+      }
+      * {
+  font-family: arial,sans-serif;
+}
+label {
+  font-size: 20px;
+	}
+div {
+  margin-bottom: 30px;
+}
+input,
+textarea {
+    border: 5px solid gray;
+  border-radius: 5px;
+  padding: 10px 0;
+  width: 200px;
+}
+select {
+  background: transparent;
+  border: 5px solid gray;
+  border-radius: 5px;
+  box-shadow: none;
+  color: #666;
+  padding: 10px 0;
+  width: 200px;
+  -webkit-appearance: none;
+}
+input:valid{
+    border-color: green;
+}
+input:invalid{
+    border-color: red;
+}
+  </style>
+</head>
+<body>
+  <h1>Create new account</h1>
+  <form action="data/data.txt" method="post">
+    <fieldset>
+        <div>
+        <label for = "title">Title:</label><br>
+        <select id="title">
+            <option value="Mr">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Ms">Ms</option>
+            <option value="Miss">Miss</option>
+        </select>
+        </div>
+        <div>
+            <label for="first_name">First name:</label><br />
+            <input type="text" name="firstname" id="first_name" placeholder="Your First Name" required/>
+        </div>
+        <div>
+            <label for="last_name">Last name:</label><br />
+            <input type="text" name="lastname" id="last_name" placeholder="Your last name" required />
+          </div>
+          <div>
+            <label for="message">Message:</label><br />
+            <textarea id="message" rows="5" cols="20" placeholder="Type your message..."></textarea>
+          </div>
+          <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+</body>
+</html>

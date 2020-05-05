@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 3.03</title>
+     
+        <style>
+          /* your CSS will go here */
+          *  {
+    margin: 0;
+    padding: 0;
+ }
+ .breadcrumb {
+    display: flex;
+    list-style: none;
+  }
+  .breadcrumb li {
+    padding: 10px;
+  }
+  .breadcrumb li:after {
+    content: '/';
+    margin-left: 20px;
+  }
+  .breadcrumb li:last-child:after {
+    content: '';
+ }
+        </style>
+    </head>
+    <body>
+        <ol class="breadcrumb">
+            <li><a href="">Home</a></li>
+            <li><a href="">Used DVDs</a></li>
+            <li>Less than £10</li>
+          </ol>
+    </body>
+</html>

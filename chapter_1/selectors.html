@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Selectors</title>
+        <style>
+            ul{
+                font-style: oblique;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            li{
+                display:block;
+                padding: 1em;
+            }
+            li:nth-child(2n + 1){
+                background-color: deepskyblue;
+                color: whitesmoke;
+                font-weight: bold;
+
+            }
+
+            .selected{
+                background-color: pink;
+            }
+            li.selected~li:nth-child(even){
+                background-color: red;
+            }
+            #abc{
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li class="selected">Item 5</li>
+            <li>Item 6</li>
+            <li id="abc">Item 7</li>
+            <li>Item 8</li>
+            <li>Item 9</li>
+        </ul>
+    </body>
+</html>
